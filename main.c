@@ -15,9 +15,9 @@ int main() {
 
         S = sqrt(p * (p - a) * (p - b) * (p - c));  //Square
 
-        ha = 2 * S / a; //Heights
-        hb = 2 * S / b;
-        hc = 2 * S / c;
+        ha = 2 * sqrt(p * (p - a) * (p - b) * (p - c)) / a; //Heights
+        hb = 2 * sqrt(p * (p - a) * (p - b) * (p - c)) / b;
+        hc = 2 * sqrt(p * (p - a) * (p - b) * (p - c)) / c;
 
         ma = sqrt(2 * b * b + 2 * c * c - a * a) / 2; //Medians
         mb = sqrt(2 * a * a + 2 * c * c - b * b) / 2;
