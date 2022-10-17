@@ -5,7 +5,10 @@ int main() {
     float a, b, c, P, p, ba, bb, bc, ha, hb, hc, ma, mb, mc, S;
 
     printf("Enter triangle sides: \n");
-    scanf("%f %f %f", &a, &b, &c);
+    if(scanf("%f %f %f", &a, &b, &c) <= 0) { //check for correct input
+        printf("Invalid data");
+        return 0;
+    };
 
     if(a < 0 || b < 0 || c < 0 || (a + b <= c) || (a + c <= b) || (b + c <= a)) { // Is there such triangle
         printf("No such triangle");
