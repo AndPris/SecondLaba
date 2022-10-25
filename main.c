@@ -5,20 +5,20 @@ int main() {
     float a, b, c, P, p, ba, bb, bc, ha, hb, hc, ma, mb, mc, S;
 
     printf("Enter triangle sides: \n");
-    if(scanf("%f", &a) <= 0) { //check for correct input
+    if(scanf("%f", &a) <= 0 || a <= 0) { //check for correct input
         printf("Invalid data");
         return 0;
     };
-    if(scanf("%f", &b) <= 0) {
+    if(scanf("%f", &b) <= 0 || b <= 0) {
         printf("Invalid data");
         return 0;
     };
-    if(scanf("%f", &c) <= 0) {
+    if(scanf("%f", &c) <= 0 || c <= 0) {
         printf("Invalid data");
         return 0;
     };
 
-    if(a < 0 || b < 0 || c < 0 || (a + b <= c) || (a + c <= b) || (b + c <= a)) { // Is there such triangle
+    if((a + b <= c) || (a + c <= b) || (b + c <= a)) { // Is there such triangle
         printf("No such triangle");
     } else {
         P = a + b + c; //Perimetr
