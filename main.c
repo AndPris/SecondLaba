@@ -5,15 +5,15 @@ int main() {
     float a, b, c, P, p, ba, bb, bc, ha, hb, hc, ma, mb, mc, S;
 
     printf("Enter triangle sides: \n");
-    if(scanf("%f", &a) <= 0 || a <= 0) { //check for correct input
+    if(!scanf("%f", &a) || a <= 0) { //check for correct input
         printf("Invalid data");
         return 0;
     };
-    if(scanf("%f", &b) <= 0 || b <= 0) {
+    if(!scanf("%f", &b) || b <= 0) {
         printf("Invalid data");
         return 0;
     };
-    if(scanf("%f", &c) <= 0 || c <= 0) {
+    if(!scanf("%f", &c) || c <= 0) {
         printf("Invalid data");
         return 0;
     };
